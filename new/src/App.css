@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+	background: rgb(255, 255, 255);
+	width: 100%;
+}
+
+hr {
+	width: 90%;
+	margin: 9rem auto 0 auto;
+}
+
+.App {
+  width: 90%;
+  margin: 0 auto;
+	background: rgb(255, 255, 255);
+	margin: 1rem auto 0 auto;
+}
+
+/* ===== первая страница ===== */
+
+h1 {
+	color: black;
+	font-size: 30px;
+}
+
+section {
+	padding: 50px;
+}
+
+a, .page-cart {
+	color: grey;
+	text-decoration: none;
+}
+
+a:hover, .page-cart:hover {
+	color: black;
+}
+
+.shoping-cart {
+	margin-top: 40px;
+}
+
+th {
+	border-bottom: 1px solid grey;
+}
+
+th {
+	padding: 10px;
+	text-align: right;
+	color: grey;
+}
+
+.poster {
+	margin: 50px 0;
+	color: grey;
+}
+
+.button-goods {
+	background: rgb(90, 80, 80);
+	width: 100%;
+	padding: 25px;
+}
+
+.cart-page {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.button-goods-active {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background: rgb(218, 82, 82);
+	width: 100%;
+	padding: 15px;
+}
+
+.chosen-cart {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-right: 15px;
+	color: white;
+}
+
+.cart-page-active {
+	color: rgb(0, 0, 0);
+	font-size: 17px;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: bold;
+	border: 2px solid rgb(199, 17, 17);
+	padding: 10px 30px;
+	border-radius: 30px;
+	background: rgb(255, 255, 255);
+}
+
+.position-number {
+	border: 2px solid black;
+	padding: 2px 7px;
+	border-radius: 15px;
+	background: black;
+	margin: 5px;
+	font-size: 15px;
+}
+
+/* ===== вторая страница ===== */
+
+.positions-chosen {
+	margin-top: 50px;
+}
+
+.button-cart {
+	background: gainsboro;
+	width: 100%;
+	padding: 25px;
+}
+
+.back-page {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-size: 17px;
+	border: 2px solid grey;
+	padding: 10px;
+	border-radius: 30px;
+	background: rgb(110, 111, 110);
+}
+
+/* ===== скачал из интернета и внёс небольшие изменения в визуализацию (первая страница) ===== */
+
+/*
+=====
+LEVEL 1. CORE STYLES
+=====
+*/
+
+.toggle{
+  --uiToggleSize: var(--toggleSize, 20px);
+  --uiToggleIndent: var(--toggleIndent, .4em);
+  --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+  --uiToggleColor: var(--toggleColor, #000);
+  --uiToggleDisabledColor: var(--toggleDisabledColor, #868e96);
+  --uiToggleBgColor: var(--toggleBgColor, #fff);
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  --uiToggleArrowColor: var(--toggleArrowColor, #fff);
+
+  display: inline-block;
+  position: relative;
+}
+
+.toggle__input{
+  position: absolute;
+  left: -99999px;
+}
+
+.toggle__label{
+  display: inline-flex;
+  cursor: pointer;
+  min-height: 30px;
+  padding-left: calc(var(--uiToggleSize) + var(--uiToggleIndent));
+}
+
+.toggle__label:before, .toggle__label:after{
+  content: "";
+  box-sizing: border-box;  
+  width: .5em;
+  height: .5em;
+  font-size: var(--uiToggleSize);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle__label:before{
+  border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  z-index: 2;
+}
+
+.toggle__input:disabled ~ .toggle__label:before{
+  border-color: var(--uiToggleDisabledColor);
+}
+
+.toggle__input:focus ~ .toggle__label:before{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 2px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled):checked:focus ~ .toggle__label:after{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 2px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  background-color: var(--uiToggleColor);
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  opacity: 1;
+}
+
+.toggle__text{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*
+The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+*/
+
+.toggle__text:before{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  font-size: var(--uiToggleSize);
+
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: var(--uiToggleArrowColor);
+
+  position: absolute;
+  top: .25em;
+  left: .1em;
+  z-index: 3;
+
+  transform-origin: left top;
+  transform: rotate(-40deg) skew(1deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  width: .25em;
+  height: .15em;
+  border-left-width: var(--uiToggleArrowWidth);
+  border-bottom-width: var(--uiToggleArrowWidth);
+  will-change: width, height;
+  transition: width .1s ease-out .2s, height .2s ease-out;
+}
+
+/*
+=====
+LEVEL 2. PRESENTATION STYLES
+=====
+*/
+
+/* 
+The demo skin
+*/
+
+.toggle__label:before, .toggle__label:after{
+  border-radius: 2px;
+}
+
+/* 
+The animation of switching states
+*/
+
+.toggle__input:not(:disabled) ~ .toggle__label:before,
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  opacity: 1;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform .2s ease-out;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:before{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  transform: rotateY(90deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:before{
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__text:before{
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  opacity: 1;
+  transition: opacity .1s ease-out .3s, width .1s ease-out .5s, height .2s ease-out .3s;
+}
+
+/*
+=====
+LEVEL 3. SETTINGS
+=====
+*/
+
+.toggle{
+  --toggleColor: red;
+  --toggleBgColor: red;
+  --toggleSize: 40px;
+}
